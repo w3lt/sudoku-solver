@@ -1,0 +1,36 @@
+@import "library";
+
+.solving-page {
+    @extend %page_style;
+    // flex-direction: row;
+
+    #sudoku-board {
+        @extend %sudoku_board_style;
+    }
+
+    .right-container {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        align-items: center;
+        font-family: 'Indie Flower', cursive;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            font-size: 3rem;
+        }
+
+        @include my-btn('.solve-btn-container', '.solve-btn');
+        @include my-btn('.resolve-btn-container', '.resolve-btn');
+    }
+}
+
+.is-small {
+    flex-direction: column;
+    justify-content: center;
+
+    .right-container {
+        margin-top: 10px;
+    }
+}

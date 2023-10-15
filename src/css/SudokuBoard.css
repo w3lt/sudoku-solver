@@ -1,0 +1,75 @@
+.sudoku-board {
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+  background-image: linear-gradient(to right bottom, #E4C6EC, #8FCFE5);
+  cursor: default;
+  position: absolute;
+  top: -150%;
+  left: 0;
+  animation: drop 2s ease forwards;
+}
+@keyframes drop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+  }
+}
+.sudoku-board .line {
+  display: flex;
+  flex-direction: row;
+}
+.sudoku-board .line .square {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  width: 48px;
+  height: 48px;
+}
+.sudoku-board .line .square div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: aliceblue;
+  /* Firefox */
+}
+.sudoku-board .line .square div input {
+  background: transparent;
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.sudoku-board .line .square div input::-webkit-outer-spin-button,
+.sudoku-board .line .square div input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.sudoku-board .line .square div input[type=number] {
+  -moz-appearance: textfield;
+  appearance: auto;
+}
+.sudoku-board .line .square div input:focus {
+  outline: none;
+}
+.sudoku-board .line .square div:focus {
+  outline: none;
+}
+.sudoku-board .line .square:not(:last-child) {
+  border-right: solid 1px transparent;
+}
+.sudoku-board .line .square:nth-child(3), .sudoku-board .line .square:nth-child(6) {
+  border-right: solid 3px transparent;
+}
+.sudoku-board .line:not(:last-child) {
+  border-bottom: solid 1px transparent;
+}
+.sudoku-board .line:nth-child(3), .sudoku-board .line:nth-child(6) {
+  border-bottom: solid 3px transparent;
+}
+
+/*# sourceMappingURL=SudokuBoard.css.map */

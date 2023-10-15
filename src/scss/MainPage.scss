@@ -1,0 +1,72 @@
+@import "library";
+
+.main-page {
+    @extend %page_style;
+
+    #sudoku-board {
+        @extend %sudoku_board_style;
+    }
+
+    .right-container {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        align-items: center;
+        font-family: 'Indie Flower', cursive;
+
+        div {
+            display: flex;
+            font-size: 3rem;
+
+            animation: appear 2s ease forwards;
+
+            @keyframes appear {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+        }
+
+        .title {
+            font-size: 4rem;
+            font-weight: 700;
+        }
+
+        @include my-btn('.start-btn-container', '.start-btn');
+    }
+}
+
+.is-big {
+    @extend %big-page-style;
+}
+
+.is-not-big {
+    @extend %small-page-style;
+
+    font-family: 'Indie Flower', cursive;
+    font-size: 3rem;
+
+    .title-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        animation: appear 2s ease forwards;
+
+        .title {
+            font-size: 4rem;
+        }
+    }
+    
+
+    @include my-btn('.start-btn-container', '.start-btn');
+
+    .start-btn-container {
+        margin-top: 10px;
+        animation: appear 2s ease forwards;
+    }
+
+    @keyframes appear {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+}

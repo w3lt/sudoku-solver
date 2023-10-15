@@ -1,0 +1,86 @@
+.sudoku-board {
+    $border-style: solid 1px transparent;
+
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    background-image: linear-gradient(to right bottom, #E4C6EC, #8FCFE5);
+    cursor: default;
+    position: absolute;
+    top: -150%;
+    left: 0;
+    animation: drop 2s ease forwards;
+
+    @keyframes drop {
+        0% { opacity: 0 }
+        100% { top: 0; }
+    }
+
+    .line {
+        display: flex;
+        flex-direction: row;
+
+        .square {
+            $size: 48px;
+
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            width: $size;
+            height: $size;
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                background-color: aliceblue;
+
+                input {
+                    background: transparent;
+                    border: none;
+                    width: 100%;
+                    height: 100%;
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+
+                /* Firefox */
+                input[type=number] {
+                    -moz-appearance: textfield;
+                    appearance: auto;
+                }
+
+                input:focus {
+                    outline: none;
+                }
+            }
+
+            div:focus {
+                outline: none;
+            }
+        }
+
+        .square:not(:last-child) {
+            border-right: $border-style;
+        }
+
+        .square:nth-child(3), .square:nth-child(6) {
+            border-right: solid 3px transparent;
+        }
+    }
+
+    .line:not(:last-child) {
+        border-bottom: $border-style;
+    }
+
+    .line:nth-child(3), .line:nth-child(6) {
+        border-bottom: solid 3px transparent;
+    }
+}

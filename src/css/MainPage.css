@@ -1,0 +1,133 @@
+.main-page {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.is-big {
+  flex-direction: row;
+}
+
+.is-not-big {
+  flex-direction: column;
+}
+
+.main-page #sudoku-board {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+.main-page #sudoku-board div {
+  display: flex;
+  position: relative;
+}
+
+.main-page .right-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  font-family: "Indie Flower", cursive;
+}
+.main-page .right-container div {
+  display: flex;
+  font-size: 3rem;
+  animation: appear 2s ease forwards;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.main-page .right-container .title {
+  font-size: 4rem;
+  font-weight: 700;
+}
+.main-page .right-container .start-btn-container {
+  display: flex;
+  padding: 1px;
+  font-size: 3rem;
+}
+.main-page .right-container .start-btn-container .start-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #E4C6EC, #8FCFE5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding: 0px 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  user-select: none;
+}
+.main-page .right-container .start-btn-container:hover {
+  cursor: pointer;
+  background: linear-gradient(to right, #E4C6EC, #8FCFE5);
+  background-clip: border-box;
+}
+.main-page .right-container .start-btn-container:hover div {
+  background-color: white;
+}
+
+.is-not-big {
+  font-family: "Indie Flower", cursive;
+  font-size: 3rem;
+}
+.is-not-big .title-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  animation: appear 2s ease forwards;
+}
+.is-not-big .title-container .title {
+  font-size: 4rem;
+}
+.is-not-big .start-btn-container {
+  display: flex;
+  padding: 1px;
+  font-size: 3rem;
+}
+.is-not-big .start-btn-container .start-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #E4C6EC, #8FCFE5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding: 0px 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  user-select: none;
+}
+.is-not-big .start-btn-container:hover {
+  cursor: pointer;
+  background: linear-gradient(to right, #E4C6EC, #8FCFE5);
+  background-clip: border-box;
+}
+.is-not-big .start-btn-container:hover div {
+  background-color: white;
+}
+.is-not-big .start-btn-container {
+  margin-top: 10px;
+  animation: appear 2s ease forwards;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=MainPage.css.map */

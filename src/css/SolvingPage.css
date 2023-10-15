@@ -1,0 +1,94 @@
+.solving-page {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.solving-page #sudoku-board {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+.solving-page #sudoku-board div {
+  display: flex;
+  position: relative;
+}
+
+.solving-page .right-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  font-family: "Indie Flower", cursive;
+}
+.solving-page .right-container div {
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+}
+.solving-page .right-container .solve-btn-container {
+  display: flex;
+  padding: 1px;
+  font-size: 3rem;
+}
+.solving-page .right-container .solve-btn-container .solve-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #E4C6EC, #8FCFE5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding: 0px 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  user-select: none;
+}
+.solving-page .right-container .solve-btn-container:hover {
+  cursor: pointer;
+  background: linear-gradient(to right, #E4C6EC, #8FCFE5);
+  background-clip: border-box;
+}
+.solving-page .right-container .solve-btn-container:hover div {
+  background-color: white;
+}
+.solving-page .right-container .resolve-btn-container {
+  display: flex;
+  padding: 1px;
+  font-size: 3rem;
+}
+.solving-page .right-container .resolve-btn-container .resolve-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #E4C6EC, #8FCFE5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding: 0px 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  user-select: none;
+}
+.solving-page .right-container .resolve-btn-container:hover {
+  cursor: pointer;
+  background: linear-gradient(to right, #E4C6EC, #8FCFE5);
+  background-clip: border-box;
+}
+.solving-page .right-container .resolve-btn-container:hover div {
+  background-color: white;
+}
+
+.is-small {
+  flex-direction: column;
+  justify-content: center;
+}
+.is-small .right-container {
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=SolvingPage.css.map */
