@@ -130,4 +130,13 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .is-not-big {
+    font-size: 9.6vw;
+  }
+  .is-not-big .title-container .title {
+    font-size: 12.8vw;
+  }
+}
+
 /*# sourceMappingURL=MainPage.css.map */

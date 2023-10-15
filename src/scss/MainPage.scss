@@ -1,4 +1,6 @@
+@use "sass:math";
 @import "library";
+
 
 .main-page {
     @extend %page_style;
@@ -68,5 +70,20 @@
     @keyframes appear {
         0% { opacity: 0; }
         100% { opacity: 1; }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .is-not-big {
+
+        $ratio: math.div(64px, 500px);
+
+        font-size: $ratio * 100vw * 0.75;
+
+        .title-container {
+            .title {
+                font-size: $ratio * 100vw;
+            }
+        }
     }
 }

@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .sudoku-board {
     $border-style: solid 1px transparent;
 
@@ -19,6 +21,7 @@
     .line {
         display: flex;
         flex-direction: row;
+
 
         .square {
             $size: 48px;
@@ -82,5 +85,18 @@
 
     .line:nth-child(3), .line:nth-child(6) {
         border-bottom: solid 3px transparent;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .sudoku-board {
+        .line {
+            .square {
+                $size: math.div(48px, 500px) * 100vw;
+
+                width: $size;
+                height: $size;
+            }
+        }
     }
 }

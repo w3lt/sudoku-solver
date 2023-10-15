@@ -72,4 +72,11 @@
   border-bottom: solid 3px transparent;
 }
 
+@media screen and (max-width: 500px) {
+  .sudoku-board .line .square {
+    width: 9.6vw;
+    height: 9.6vw;
+  }
+}
+
 /*# sourceMappingURL=SudokuBoard.css.map */

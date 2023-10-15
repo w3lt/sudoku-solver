@@ -91,4 +91,10 @@
   margin-top: 10px;
 }
 
+@media screen and (max-width: 500px) {
+  .is-small .right-container .title {
+    font-size: 9.6vw;
+  }
+}
+
 /*# sourceMappingURL=SolvingPage.css.map */

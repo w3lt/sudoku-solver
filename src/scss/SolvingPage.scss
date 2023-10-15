@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "library";
 
 .solving-page {
@@ -32,5 +33,18 @@
 
     .right-container {
         margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .is-small {
+
+        $ratio: math.div(48px, 500px);
+
+        .right-container {
+            .title {
+                font-size: $ratio * 100vw;
+            }
+        }
     }
 }
